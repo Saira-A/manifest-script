@@ -22,7 +22,7 @@ def update_urls(manifest):
                 # Update or add the thumbnail URL
                 body_id = annotation['body']['id']
                 base_filename = re.search(r'/iiif/2/(.*)/full/full/0/default.jpg', body_id).group(1)
-                thumb_url = f"http://localhost:8182/iiif/2/{base_filename}/full/!100,100/0/default.jpg"
+                thumb_url = f"http://localhost:8182/iiif/2/{base_filename}/full/90,/0/default.jpg"
 
                 if 'thumbnail' in item:
                     for thumbnail in item['thumbnail']:
